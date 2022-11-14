@@ -13,7 +13,7 @@ require (
 )
 
 require (
-	github.com/alecthomas/kong v0.7.0
+	github.com/alecthomas/kong v0.7.1
 	golang.org/x/sys v0.1.0 // indirect
 )
 
