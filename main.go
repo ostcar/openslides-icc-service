@@ -111,7 +111,10 @@ func initService(lookup environment.Environmenter) (func(context.Context) error,
 	}
 
 	// Auth Service.
-	authService, authBackground := auth.New(lookup, messageBus)
+	authService, authBackground, err := auth.New(lookup, messageBus)
+	if err != nil {
+		return nil, fmt.Errorf("init auth system: %w", err)
+	}
 	backgroundTasks = append(backgroundTasks, authBackground)
 
 	backend := redis.New(envICCRedisHost.Value(lookup) + ":" + envICCRedisPort.Value(lookup))
