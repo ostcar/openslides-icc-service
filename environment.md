@@ -20,5 +20,5 @@ The Service uses the following environment variables:
 * `AUTH_FAKE`: Use user id 1 for every request. Ignores all other auth environment variables. The default is `false`.
 * `AUTH_TOKEN_KEY_FILE`: Key to sign the JWT auth tocken. The default is `/run/secrets/auth_token_key`.
 * `AUTH_COOKIE_KEY_FILE`: Key to sign the JWT auth cookie. The default is `/run/secrets/auth_cookie_key`.
-* `ICC_REDIS_HOST`: The host of the redis instance to save icc messages. The default is `localhost`.
-* `ICC_REDIS_PORT`: The port of the redis instance to save icc messages. The default is `6379`.
+* `CACHE_HOST`: The host of the redis instance to save icc messages. The default is `localhost`.
+* `CACHE_PORT`: The port of the redis instance to save icc messages. The default is `6379`.
